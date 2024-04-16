@@ -76,7 +76,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
   ),
   [12] = LAYOUT(
     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_HOME,            KC_PGDN,            KC_PAGE_UP,         KC_END,
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_ESCAPE,      KC_LEFT,            KC_DOWN,            KC_UP,              KC_RIGHT,
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,      KC_LEFT,            KC_DOWN,            KC_UP,              KC_RIGHT,
     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, RCTL(KC_LEFT),      KC_RCBR,            KC_LCBR,            RCTL(KC_RIGHT),
                                                                 KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
   ),
