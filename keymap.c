@@ -3,9 +3,9 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
 {
   [0] = LAYOUT(
-    MT(MOD_LGUI, KC_B), MT(MOD_LCTL, KC_L), MT(MOD_LSFT, KC_D), MT(MOD_LALT, KC_C),     KC_V,                                           KC_J,           MT(MOD_RALT, KC_F), MT(MOD_RSFT, KC_O), MT(MOD_RCTL, KC_U), KC_RIGHT_GUI,
+    MT(MOD_LGUI, KC_B), LT(9,KC_L),         MT(MOD_LALT, KC_D), KC_C,                   KC_V,                                           KC_J,           KC_F,               MT(MOD_RALT, KC_O), LT(10,KC_U),        KC_RIGHT_GUI,
     LT(1,KC_N),         LT(2,KC_R),         LT(3,KC_T),         LT(4,KC_S),             KC_G,                                           KC_Y,           LT(5,KC_H),         LT(6,KC_A),         LT(7,KC_E),         LT(8,KC_I),
-    KC_X,               LT(9,KC_Q),         KC_M,               KC_W,                   KC_Z,                                           KC_K,           KC_P,               LT(11,KC_COMMA),    LT(10,KC_DOT),      KC_QUOTE,
+    LT(11,KC_X),        KC_Q,               KC_M,               KC_W,                   KC_Z,                                           KC_K,           KC_P,               KC_COMMA,           KC_DOT,             KC_QUOTE,
                                                                 MT(MOD_LSFT, KC_SPACE), KC_LCTL,                                        MO(13),         LT(12,KC_ENTER)
   ),
   [1] = LAYOUT(
@@ -63,15 +63,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
                                                                 KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [10] = LAYOUT(
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     QK_MACRO_28,        KC_TRANSPARENT,     KC_TRANSPARENT, 
     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_CIRC,            KC_DLR,             KC_TRANSPARENT,     KC_TRANSPARENT, 
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     QK_MACRO_28,        KC_TRANSPARENT,     KC_TRANSPARENT, 
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
                                                                 KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [11] = LAYOUT(
-    RGB_MODE_FORWARD,   RGB_VAD,            RGB_VAI,            RGB_TOG,                KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,
-    KC_TRANSPARENT,     KC_AUDIO_MUTE,      KC_AUDIO_VOL_DOWN,  KC_AUDIO_VOL_UP,        KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,
     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,
+    KC_TRANSPARENT,     KC_AUDIO_MUTE,      KC_AUDIO_VOL_DOWN,  KC_AUDIO_VOL_UP,        KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,
                                                                 KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [12] = LAYOUT(
