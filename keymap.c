@@ -1,5 +1,10 @@
 #include QMK_KEYBOARD_H
 
+enum combo
+{
+  FN_LAYER_TOGGLE
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
 {
   [0] = LAYOUT(
@@ -9,15 +14,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
                                                                 MT(MOD_LSFT, KC_SPACE), KC_LCTL,                                        MO(13),         LT(12,KC_ENTER)
   ),
   [1] = LAYOUT(
-    KC_TRANSPARENT,     KC_TRANSPARENT,     QK_MACRO_0,         QK_MACRO_1,             KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_F7,              KC_F8,              KC_F9,              KC_F12, 
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_MINUS,           KC_PLUS,                KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_F4,              KC_F5,              KC_F6,              KC_F11, 
-    KC_TRANSPARENT,     QK_MACRO_2,         QK_MACRO_3,         KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_F1,              KC_F2,              KC_F3,              KC_F10, 
+    KC_TRANSPARENT,     KC_TRANSPARENT,     QK_MACRO_0,         QK_MACRO_1,             KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_MINUS,           KC_PLUS,                KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
+    KC_TRANSPARENT,     QK_MACRO_2,         QK_MACRO_3,         KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
                                                                 KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [2] = LAYOUT(
     KC_TRANSPARENT,     KC_TRANSPARENT,     QK_MACRO_4,         KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
     KC_HASH,            KC_TRANSPARENT,     KC_EQUAL,           KC_COLN,                KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
-    KC_TRANSPARENT,     KC_TRANSPARENT,     QK_MACRO_5,         QK_MACRO_6,             KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
+    QK_MACRO_12,        KC_TRANSPARENT,     QK_MACRO_5,         QK_MACRO_6,             KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
                                                                 KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [3] = LAYOUT(
@@ -41,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
   [6] = LAYOUT(
     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_EXLM,            KC_TRANSPARENT,     KC_TILD,            KC_TRANSPARENT, 
     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_QUES,            KC_TRANSPARENT,     KC_UNDS,            KC_SCLN,        
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     QK_MACRO_12,    
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,    
                                                                 KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [7] = LAYOUT(
@@ -59,7 +64,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
   [9] = LAYOUT(
     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     QK_MACRO_20,        QK_MACRO_21,        KC_TRANSPARENT, 
     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, QK_MACRO_22,        QK_MACRO_23,        QK_MACRO_24,        KC_TRANSPARENT, 
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_BSLS,            KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     QK_MACRO_25,        QK_MACRO_26,        QK_MACRO_27,    
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     QK_MACRO_25,        QK_MACRO_26,        QK_MACRO_27,    
                                                                 KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [10] = LAYOUT(
@@ -76,7 +81,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
   ),
   [12] = LAYOUT(
     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_HOME,            KC_PGDN,            KC_PAGE_UP,         KC_END,
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,      KC_LEFT,            KC_DOWN,            KC_UP,              KC_RIGHT,
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_LEFT,            KC_DOWN,            KC_UP,              KC_RIGHT,
     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, RCTL(KC_LEFT),      KC_RCBR,            KC_LCBR,            RCTL(KC_RIGHT),
                                                                 KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
   ),
@@ -86,7 +91,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_1,               KC_2,               KC_3,               KC_TRANSPARENT, 
                                                                 KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
   ),
+  [14] = LAYOUT(
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_F7,              KC_F8,              KC_F9,              KC_F12, 
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_F4,              KC_F5,              KC_F6,              KC_F11, 
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_F1,              KC_F2,              KC_F3,              KC_F10, 
+                                                                KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
+  )
 };
+
+const uint16_t PROGMEM fn_layer_toggle_combo[] = {MO(13), LT(12,KC_ENTER), COMBO_END};
+
+combo_t key_combos[] = {[FN_LAYER_TOGGLE] = COMBO(fn_layer_toggle_combo, MO(14))};
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record)
 {
