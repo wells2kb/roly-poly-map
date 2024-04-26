@@ -2,7 +2,10 @@
 
 enum combo
 {
-  FN_LAYER_TOGGLE
+  COMBO_ID_LAYER_TOGGLE_FN,
+  COMBO_ID_STENO_SC,
+  COMBO_ID_STENO_UE,
+  COMBO_ID_STENO_PH
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
@@ -99,9 +102,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
   )
 };
 
-const uint16_t PROGMEM fn_layer_toggle_combo[] = {MO(13), LT(12,KC_ENTER), COMBO_END};
-
-combo_t key_combos[] = {[FN_LAYER_TOGGLE] = COMBO(fn_layer_toggle_combo, MO(14))};
+const uint16_t PROGMEM combo_layer_toggle_fn[] = {MO(13), LT(12,KC_ENTER), COMBO_END};
+const uint16_t PROGMEM combo_steno_sc[] = {KC_C, LT(4,KC_S), COMBO_END};
+const uint16_t PROGMEM combo_steno_ue[] = {LT(10,KC_U), LT(7,KC_E), COMBO_END};
+const uint16_t PROGMEM combo_steno_ph[] = {LT(5,KC_H), KC_P, COMBO_END};
+                                                 
+combo_t key_combos[] =
+{
+  [COMBO_ID_LAYER_TOGGLE_FN] = COMBO(combo_layer_toggle_fn, MO(14)),
+  [COMBO_ID_STENO_SC] = COMBO(combo_steno_sc, QK_MACRO_29),
+  [COMBO_ID_STENO_UE] = COMBO(combo_steno_ue, QK_MACRO_30),
+  [COMBO_ID_STENO_PH] = COMBO(combo_steno_ph, QK_MACRO_31)
+};
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record)
 {
@@ -192,6 +204,15 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
       break;
     case QK_MACRO_28:
       if (record->event.pressed) SEND_STRING(SS_RSFT(SS_TAP(X_4)) SS_DELAY(MACRO_DELAY) SS_RSFT(SS_TAP(X_LBRC)));
+      break;
+    case QK_MACRO_29:
+      if (record->event.pressed) SEND_STRING(SS_TAP(X_S) SS_DELAY(MACRO_DELAY) SS_TAP(X_C));
+      break;
+    case QK_MACRO_30:
+      if (record->event.pressed) SEND_STRING(SS_TAP(X_U) SS_DELAY(MACRO_DELAY) SS_TAP(X_E));
+      break;
+    case QK_MACRO_31:
+      if (record->event.pressed) SEND_STRING(SS_TAP(X_P) SS_DELAY(MACRO_DELAY) SS_TAP(X_H));
       break;
   }
   return true;
