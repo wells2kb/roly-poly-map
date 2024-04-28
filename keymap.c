@@ -3,116 +3,130 @@
 enum combo
 {
   COMBO_ID_LAYER_TOGGLE_FN,
+
+  COMBO_ID_STENO_KE,
+  COMBO_ID_STENO_PH,
+  COMBO_ID_STENO_Q,
   COMBO_ID_STENO_SC,
   COMBO_ID_STENO_UE,
-  COMBO_ID_STENO_PH
+  COMBO_ID_STENO_Z
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
 {
   [0] = LAYOUT(
-    MT(MOD_LGUI, KC_B), LT(9,KC_L),         MT(MOD_LALT, KC_D), KC_C,                   KC_V,                                           KC_J,           KC_F,               MT(MOD_RALT, KC_O), LT(10,KC_U),        KC_RIGHT_GUI,
-    LT(1,KC_N),         LT(2,KC_R),         LT(3,KC_T),         LT(4,KC_S),             KC_G,                                           KC_Y,           LT(5,KC_H),         LT(6,KC_A),         LT(7,KC_E),         LT(8,KC_I),
-    LT(11,KC_X),        KC_Q,               KC_M,               KC_W,                   KC_Z,                                           KC_K,           KC_P,               KC_COMMA,           KC_DOT,             KC_QUOTE,
-                                                                MT(MOD_LSFT, KC_SPACE), KC_LCTL,                                        MO(13),         LT(12,KC_ENTER)
+    MT(MOD_LGUI, KC_B), LT(9,KC_L),         MT(MOD_LALT, KC_D), KC_C,                   KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_F,               MT(MOD_RALT, KC_O), LT(10,KC_U),        MT(MOD_LGUI, KC_Y),
+    LT(1,KC_N),         LT(2,KC_R),         LT(3,KC_T),         LT(4,KC_S),             KC_TRANSPARENT,                                 KC_TRANSPARENT,   LT(5,KC_H),         LT(6,KC_A),         LT(7,KC_E),         LT(8,KC_I),
+    LT(11,KC_V),        KC_W,               KC_M,               KC_G,                   KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_P,               KC_X,               KC_K,               KC_J,
+                                                                MT(MOD_LSFT, KC_SPACE), MT(MOD_LCTL, KC_DOT),                            LT(13, KC_COMMA), LT(12,KC_ENTER)
   ),
   [1] = LAYOUT(
-    KC_TRANSPARENT,     KC_TRANSPARENT,     QK_MACRO_0,         QK_MACRO_1,             KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_MINUS,           KC_PLUS,                KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
-    KC_TRANSPARENT,     QK_MACRO_2,         QK_MACRO_3,         KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
-                                                                KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
+    KC_TRANSPARENT,     KC_TRANSPARENT,     QK_MACRO_0,         QK_MACRO_1,             KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_MINUS,           KC_PLUS,                KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
+    KC_TRANSPARENT,     QK_MACRO_2,         QK_MACRO_3,         KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
+                                                                KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT
   ),
   [2] = LAYOUT(
-    KC_TRANSPARENT,     KC_TRANSPARENT,     QK_MACRO_4,         KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
-    KC_HASH,            KC_TRANSPARENT,     KC_EQUAL,           KC_COLN,                KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
-    QK_MACRO_12,        KC_TRANSPARENT,     QK_MACRO_5,         QK_MACRO_6,             KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
-                                                                KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
+    KC_TRANSPARENT,     KC_TRANSPARENT,     QK_MACRO_4,         KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
+    KC_HASH,            KC_TRANSPARENT,     KC_EQUAL,           KC_COLN,                KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
+    QK_MACRO_12,        KC_TRANSPARENT,     QK_MACRO_5,         QK_MACRO_6,             KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
+                                                                KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT
   ),
   [3] = LAYOUT(
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
-    KC_AT,              KC_PERC,            KC_TRANSPARENT,     KC_GRAVE,               KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     QK_MACRO_7,             KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
-                                                                KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
+    KC_AT,              KC_PERC,            KC_TRANSPARENT,     KC_GRAVE,               KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     QK_MACRO_7,             KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
+                                                                KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT
   ),
   [4] = LAYOUT(
-    KC_TRANSPARENT,     QK_MACRO_8,         QK_MACRO_9,         KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
-    KC_BSLS,            KC_ASTR,            KC_SLASH,           KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
-    KC_TRANSPARENT,     QK_MACRO_10,        QK_MACRO_11,        KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
-                                                                KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
+    KC_TRANSPARENT,     QK_MACRO_8,         QK_MACRO_9,         KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
+    KC_BSLS,            KC_ASTR,            KC_SLASH,           KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
+    KC_TRANSPARENT,     QK_MACRO_10,        QK_MACRO_11,        KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
+                                                                KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT
   ),
   [5] = LAYOUT(
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_LCBR,            KC_RCBR,            KC_TRANSPARENT, 
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_LPRN,            KC_RPRN,            KC_DQUO,        
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_LBRC,            KC_RBRC,            KC_TRANSPARENT, 
-                                                                KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_LCBR,            KC_RCBR,            KC_TRANSPARENT, 
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_LPRN,            KC_RPRN,            KC_DQUO,        
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_LBRC,            KC_RBRC,            KC_TRANSPARENT, 
+                                                                KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT
   ),
   [6] = LAYOUT(
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_EXLM,            KC_TRANSPARENT,     KC_TILD,            KC_TRANSPARENT, 
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_QUES,            KC_TRANSPARENT,     KC_UNDS,            KC_SCLN,        
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,    
-                                                                KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_EXLM,            KC_TRANSPARENT,     KC_TILD,            KC_TRANSPARENT, 
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_QUES,            KC_TRANSPARENT,     KC_UNDS,            KC_SCLN,        
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,    
+                                                                KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT
   ),
   [7] = LAYOUT(
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, RSFT(KC_TAB),   RCTL(KC_BSPC),  KC_TRANSPARENT, RCTL(KC_DELETE),
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TAB,         KC_BSPC,        KC_TRANSPARENT, KC_DELETE,      
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_ESCAPE,      QK_MACRO_13,    KC_TRANSPARENT, RALT(RCTL(KC_DELETE)),
-                                                                KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   RSFT(KC_TAB),   RCTL(KC_BSPC),  KC_TRANSPARENT, RCTL(KC_DELETE),
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TAB,         KC_BSPC,        KC_TRANSPARENT, KC_DELETE,      
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_ESCAPE,      QK_MACRO_13,    KC_TRANSPARENT, RALT(RCTL(KC_DELETE)),
+                                                                KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT
   ),
   [8] = LAYOUT(
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, QK_MACRO_14,        QK_MACRO_15,        QK_MACRO_16,        KC_TRANSPARENT, 
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_AMPR,            KC_PIPE,            QK_MACRO_17,        KC_TRANSPARENT, 
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     QK_MACRO_18,        QK_MACRO_19,        KC_TRANSPARENT, 
-                                                                KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   QK_MACRO_14,        QK_MACRO_15,        QK_MACRO_16,        KC_TRANSPARENT, 
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_AMPR,            KC_PIPE,            QK_MACRO_17,        KC_TRANSPARENT, 
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     QK_MACRO_18,        QK_MACRO_19,        KC_TRANSPARENT, 
+                                                                KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT
   ),
   [9] = LAYOUT(
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     QK_MACRO_20,        QK_MACRO_21,        KC_TRANSPARENT, 
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, QK_MACRO_22,        QK_MACRO_23,        QK_MACRO_24,        KC_TRANSPARENT, 
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     QK_MACRO_25,        QK_MACRO_26,        QK_MACRO_27,    
-                                                                KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     QK_MACRO_20,        QK_MACRO_21,        KC_TRANSPARENT, 
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   QK_MACRO_22,        QK_MACRO_23,        QK_MACRO_24,        KC_TRANSPARENT, 
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     QK_MACRO_25,        QK_MACRO_26,        QK_MACRO_27,    
+                                                                KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT
   ),
   [10] = LAYOUT(
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_CIRC,            KC_DLR,             KC_TRANSPARENT,     KC_TRANSPARENT, 
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     QK_MACRO_28,        KC_TRANSPARENT,     KC_TRANSPARENT, 
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
-                                                                KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_CIRC,            KC_DLR,             KC_TRANSPARENT,     KC_TRANSPARENT, 
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     QK_MACRO_28,        KC_TRANSPARENT,     KC_TRANSPARENT, 
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT, 
+                                                                KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT
   ),
   [11] = LAYOUT(
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,
-    KC_TRANSPARENT,     KC_AUDIO_MUTE,      KC_AUDIO_VOL_DOWN,  KC_AUDIO_VOL_UP,        KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,
-                                                                KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,
+    KC_TRANSPARENT,     KC_AUDIO_MUTE,      KC_AUDIO_VOL_DOWN,  KC_AUDIO_VOL_UP,        KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,
+                                                                KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT
   ),
   [12] = LAYOUT(
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_HOME,            KC_PGDN,            KC_PAGE_UP,         KC_END,
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_LEFT,            KC_DOWN,            KC_UP,              KC_RIGHT,
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, RCTL(KC_LEFT),      KC_RCBR,            KC_LCBR,            RCTL(KC_RIGHT),
-                                                                KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_HOME,            KC_PGDN,            KC_PAGE_UP,         KC_END,
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_LEFT,            KC_DOWN,            KC_UP,              KC_RIGHT,
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   RCTL(KC_LEFT),      KC_RCBR,            KC_LCBR,            RCTL(KC_RIGHT),
+                                                                KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT
   ),
   [13] = LAYOUT(
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_7,               KC_8,               KC_9,               KC_TRANSPARENT, 
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_4,               KC_5,               KC_6,               KC_0,
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_1,               KC_2,               KC_3,               KC_TRANSPARENT, 
-                                                                KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_7,               KC_8,               KC_9,               KC_TRANSPARENT, 
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_4,               KC_5,               KC_6,               KC_0,
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_1,               KC_2,               KC_3,               KC_TRANSPARENT, 
+                                                                KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT
   ),
   [14] = LAYOUT(
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_F7,              KC_F8,              KC_F9,              KC_F12, 
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_F4,              KC_F5,              KC_F6,              KC_F11, 
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_F1,              KC_F2,              KC_F3,              KC_F10, 
-                                                                KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_F7,              KC_F8,              KC_F9,              KC_F12, 
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_F4,              KC_F5,              KC_F6,              KC_F11, 
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_F1,              KC_F2,              KC_F3,              KC_F10, 
+                                                                KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT
   )
 };
 
-const uint16_t PROGMEM combo_layer_toggle_fn[] = {MO(13), LT(12,KC_ENTER), COMBO_END};
+const uint16_t PROGMEM combo_layer_toggle_fn[] = {LT(13, KC_COMMA), LT(12,KC_ENTER), COMBO_END};
+
+const uint16_t PROGMEM combo_steno_ke[] = {LT(7,KC_E), KC_K, COMBO_END};
+const uint16_t PROGMEM combo_steno_ph[] = {LT(5,KC_H), KC_P, COMBO_END};
+const uint16_t PROGMEM combo_steno_q[] = {KC_F, LT(5,KC_H), COMBO_END};
 const uint16_t PROGMEM combo_steno_sc[] = {KC_C, LT(4,KC_S), COMBO_END};
 const uint16_t PROGMEM combo_steno_ue[] = {LT(10,KC_U), LT(7,KC_E), COMBO_END};
-const uint16_t PROGMEM combo_steno_ph[] = {LT(5,KC_H), KC_P, COMBO_END};
-                                                 
+const uint16_t PROGMEM combo_steno_z[] = {LT(4,KC_S), KC_G, COMBO_END};
+
+#define LOL_I_HAVE_33_MACROS QK_MACRO_31 + 1
+
 combo_t key_combos[] =
 {
   [COMBO_ID_LAYER_TOGGLE_FN] = COMBO(combo_layer_toggle_fn, MO(14)),
+
+  [COMBO_ID_STENO_KE] = COMBO(combo_steno_ke, LOL_I_HAVE_33_MACROS),
+  [COMBO_ID_STENO_PH] = COMBO(combo_steno_ph, QK_MACRO_31),
+  [COMBO_ID_STENO_Q] = COMBO(combo_steno_q, KC_Q),
   [COMBO_ID_STENO_SC] = COMBO(combo_steno_sc, QK_MACRO_29),
   [COMBO_ID_STENO_UE] = COMBO(combo_steno_ue, QK_MACRO_30),
-  [COMBO_ID_STENO_PH] = COMBO(combo_steno_ph, QK_MACRO_31)
+  [COMBO_ID_STENO_Z] = COMBO(combo_steno_z, KC_Z)
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record)
@@ -213,6 +227,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
       break;
     case QK_MACRO_31:
       if (record->event.pressed) SEND_STRING(SS_TAP(X_P) SS_DELAY(MACRO_DELAY) SS_TAP(X_H));
+      break;
+    case LOL_I_HAVE_33_MACROS:
+      if (record->event.pressed) SEND_STRING(SS_TAP(X_K) SS_DELAY(MACRO_DELAY) SS_TAP(X_E));
       break;
   }
   return true;
