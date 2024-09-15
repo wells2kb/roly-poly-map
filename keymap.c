@@ -49,13 +49,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
                                                                 KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT
   ),
   [5] = LAYOUT(
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_LCBR,            KC_RCBR,            KC_TRANSPARENT,
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_LCBR,            KC_RCBR,            KC_QUOTE,
     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_LPRN,            KC_RPRN,            KC_DQUO,
     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_LBRC,            KC_RBRC,            KC_TRANSPARENT,
                                                                 KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT
   ),
   [6] = LAYOUT(
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_EXLM,            KC_TRANSPARENT,     KC_TILD,            KC_QUOTE,
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_EXLM,            KC_TRANSPARENT,     KC_TILD,            KC_TRANSPARENT,
     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_QUES,            KC_TRANSPARENT,     KC_UNDS,            KC_SCLN,
     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,
                                                                 KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT
