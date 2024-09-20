@@ -22,7 +22,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
     MT(MOD_LGUI, KC_B), LT(9,KC_L),         MT(MOD_LALT, KC_D), KC_C,                   KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_F,               MT(MOD_RALT, KC_O), LT(10,KC_U),        MT(MOD_LGUI, KC_Y),
     LT(1,KC_N),         LT(2,KC_R),         LT(3,KC_T),         LT(4,KC_S),             KC_TRANSPARENT,                                 KC_TRANSPARENT,   LT(5,KC_H),         LT(6,KC_A),         LT(7,KC_E),         LT(8,KC_I),
     LT(11,KC_V),        KC_W,               KC_M,               KC_G,                   KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_P,               KC_X,               KC_K,               KC_J,
-                                                                MT(MOD_LSFT, KC_SPACE), MT(MOD_LCTL, KC_COMMA),                         LT(13,  KC_DOT),  LT(12,KC_ENTER)
+                                                                MT(MOD_LCTL, KC_COMMA), MT(MOD_LSFT, KC_SPACE),                         LT(12,KC_ENTER), LT(13,  KC_DOT)
   ),
   [1] = LAYOUT(
     KC_TRANSPARENT,     KC_TRANSPARENT,     QK_MACRO_0,         QK_MACRO_1,             KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,
