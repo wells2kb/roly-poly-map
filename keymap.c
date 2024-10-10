@@ -12,8 +12,6 @@ enum combo
   COMBO_ID_STENO_SC,
   COMBO_ID_STENO_UE,
   COMBO_ID_STENO_Z,
-  COMBO_ID_STENO_LABK,
-  COMBO_ID_STENO_RABK
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
@@ -37,9 +35,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
                                                                 KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT
   ),
   [3] = LAYOUT(
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     QK_MACRO_7,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,
     KC_AT,              KC_PERC,            KC_TRANSPARENT,     KC_GRAVE,               KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,
-    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     QK_MACRO_7,             KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,
+    KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,             KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,
                                                                 KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT
   ),
   [4] = LAYOUT(
@@ -52,7 +50,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_LCBR,            KC_RCBR,            KC_QUOTE,
     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_LPRN,            KC_RPRN,            KC_DQUO,
     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT,     KC_LBRC,            KC_RBRC,            KC_TRANSPARENT,
-                                                                KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_TRANSPARENT
+                                                                KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_LABK,   KC_RABK
   ),
   [6] = LAYOUT(
     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,         KC_TRANSPARENT,                                 KC_TRANSPARENT,   KC_EXLM,            KC_TRANSPARENT,     KC_TILD,            KC_TRANSPARENT,
@@ -118,8 +116,6 @@ const uint16_t PROGMEM combo_steno_q[] = {KC_F, LT(5,KC_H), COMBO_END};
 const uint16_t PROGMEM combo_steno_sc[] = {KC_C, LT(4,KC_S), COMBO_END};
 const uint16_t PROGMEM combo_steno_ue[] = {LT(10,KC_U), LT(7,KC_E), COMBO_END};
 const uint16_t PROGMEM combo_steno_z[] = {LT(4,KC_S), KC_G, COMBO_END};
-const uint16_t PROGMEM combo_steno_LABK[] = {KC_LCBR, KC_LPRN, COMBO_END};
-const uint16_t PROGMEM combo_steno_RABK[] = {KC_RCBR, KC_RPRN, COMBO_END};
 
 combo_t key_combos[] =
 {
@@ -131,8 +127,6 @@ combo_t key_combos[] =
   [COMBO_ID_STENO_SC] = COMBO(combo_steno_sc, QK_MACRO_29),
   [COMBO_ID_STENO_UE] = COMBO(combo_steno_ue, QK_MACRO_30),
   [COMBO_ID_STENO_Z] = COMBO(combo_steno_z, KC_Z),
-  [COMBO_ID_STENO_LABK] = COMBO(combo_steno_LABK, KC_LABK),
-  [COMBO_ID_STENO_RABK] = COMBO(combo_steno_RABK, KC_RABK)
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record)
